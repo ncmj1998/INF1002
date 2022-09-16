@@ -1,13 +1,23 @@
 import sys
 
-inputs = []
-for i in range(1,len(sys.argv)):
-    input = sys.argv[i]
-    if input.isdigit():
-        inputs.append(int(sys.argv[i]))
+# inputs = []
+# for i in range(1,len(sys.argv)):
+#     input = sys.argv[i]
+#     if input.isdigit():
+#         inputs.append(int(sys.argv[i]))
+#     else:
+#         print("Invalid input")
+#         exit()
+
+inputs = sys.argv[1]
+inputs = inputs.split(",")
+for i in range(len(inputs)):
+    if inputs[i].isdigit():
+        inputs[i] = int(inputs[i])
     else:
         print("Invalid input")
         exit()
+
 inputs.sort() ##sort input in ascending order
 
 even_count = 0
