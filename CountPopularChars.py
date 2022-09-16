@@ -15,8 +15,7 @@ for letter in input: #if letter in dictionary, add count
         letters_dict[letter] = 1
 
 #sort dictionary in descending order by value
-letters_dict = dict(sorted(letters_dict.items(), key=lambda item: item[1],reverse=True))
-
+letters_dict = dict(sorted(letters_dict.items(), key=lambda x: (-x[1], x[0])))
 count = 0
 output = ""
 for pair in letters_dict:
